@@ -97,7 +97,7 @@ zsh
 
 #Carli
 plasma-meta
-kde-applications-meta
+#kde-applications-meta
 packagekit-qt5
 sddm
 bash-completion
@@ -113,3 +113,6 @@ git
 base-devel
 yay-bin
 neofetch
+dolphin
+konsole
+kate
