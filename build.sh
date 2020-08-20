@@ -114,6 +114,7 @@ make_packages() {
 
 # Customize installation (airootfs)
 make_customize_airootfs() {
+    cp "${script_path}/pacman.conf" "${work_dir}/x86_64/airootfs/etc"
     if [[ -e "${script_path}/airootfs/etc/passwd" ]]; then
         while IFS=':' read -a passwd -r; do
             [[ "${passwd[5]}" == '/' ]] && continue
