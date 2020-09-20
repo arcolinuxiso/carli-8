@@ -23,13 +23,13 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service systemd-networkd.service systemd-resolved.service
+systemctl enable pacman-init.service
+systemctl enable choose-mirror.service systemd-networkd.service systemd-resolved.service
 systemctl set-default graphical.target
 systemctl enable sddm.service
 
 pacman-key --init
-pacman-key --populate archlinux
-pacman-key --populate carli
+pacman-key --populate archlinux carli
 pacman-key --lsign-key 4030B8368D944C9C
 
 groupscarli="adm,audio,disk,floppy,log,network,optical,rfkill,storage,video,wheel,sys"
