@@ -109,6 +109,9 @@ carli-calamares-config
 carli-system-installation
 grub
 
+#carli
+carli-keyring
+
 #Software
 git
 base-devel

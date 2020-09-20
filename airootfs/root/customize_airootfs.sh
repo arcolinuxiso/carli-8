@@ -29,6 +29,8 @@ systemctl enable sddm.service
 
 pacman-key --init
 pacman-key --populate archlinux
+pacman-key --populate carli
+pacman-key --lsign-key 4030B8368D944C9C
 
 groupscarli="adm,audio,disk,floppy,log,network,optical,rfkill,storage,video,wheel,sys"
 useradd -m -g users -G $groupscarli -s /bin/bash liveuser
