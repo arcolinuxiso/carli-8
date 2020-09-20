@@ -106,6 +106,7 @@ partitionmanager
 #Calamares
 calamares
 carli-calamares-config
+carli-system-installation
 grub
 
 #Software
